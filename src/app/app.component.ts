@@ -12,7 +12,7 @@ export class AppComponent {
 
   }
   appName: string = 'shopping app';
-  employeeList: any;
+  employeeList: any = [];
   CountryList: any;
   prodName = 'XBOX';
   productNum: number = 10;
@@ -55,11 +55,18 @@ export class AppComponent {
   }
 
   getEmployeeList() {
-    console.log("employee list calling");
-    this.appService.getEmployeeListfromBackend().subscribe((responseData) => {
+    
+    this.appService.getEmployeeListfromBackend().subscribe((responseData: any) => {
 
-      this.employeeList = responseData;
-      console.log(this.employeeList);
+      //this.employeeList = responseData;
+      responseData.forEach((employee: any) => {
+        console.log(employee);
+        if(employee.id <= 25 ) {
+          this.employeeList.push({...employee, status: 'Junoir'})
+        } else {
+          this.employeeList.push({...employee, status: 'Senior'})
+        }
+      });
     })
 
   }
