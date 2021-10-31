@@ -32,4 +32,10 @@ navigateToAbout(){
   this.router.navigate(['about']);
 
 }
+navigateToUniversity(){
+console.log("inside university");
+this.router.navigate(['university']);
+
+
+}
 }

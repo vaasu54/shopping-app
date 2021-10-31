@@ -14,6 +14,7 @@ import { BusinessComponent } from './news/business/business.component';
 import { SportComponent } from './news/sport/sport.component';
 import { MovieComponent } from './news/movie/movie.component';
 import { PoliticalComponent } from './news/political/political.component';
+import { UniversityComponent } from './university/university.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { PoliticalComponent } from './news/political/political.component';
     BusinessComponent,
     SportComponent,
     MovieComponent,
-    PoliticalComponent
+    PoliticalComponent,
+    UniversityComponent
   ],
   imports: [
     BrowserModule,

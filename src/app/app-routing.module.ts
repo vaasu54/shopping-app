@@ -8,11 +8,13 @@ import { MovieComponent } from './news/movie/movie.component';
 import { NewsComponent } from './news/news.component';
 import { PoliticalComponent } from './news/political/political.component';
 import { SportComponent } from './news/sport/sport.component';
+import { UniversityComponent } from './university/university.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'news', component: NewsComponent, children: [
+  {
+    path: 'news', component: NewsComponent, children: [
       { path: '', redirectTo: 'business', pathMatch: 'full' },
       { path: 'business', component: BusinessComponent },
       { path: 'sport', component: SportComponent },
@@ -21,7 +23,9 @@ const routes: Routes = [
     ]
   },
   { path: 'contact', component: ContactComponent },
+  { path: 'university', component: UniversityComponent },
   { path: 'about', component: AboutComponent }
+
 ];
 
 @NgModule({
