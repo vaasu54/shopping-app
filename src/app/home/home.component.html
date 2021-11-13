@@ -1,1 +1,25 @@
-<p>home works!</p>
+<p>{{employeeName}}</p>
+<button type="submit" (click)="updateName()">change Name</button>
+<button type="submit" (click)="getCustomerByName()">Name Search</button>
+<button type="submit" (click)="getEmployeeList()">Employee List</button>
+<button type="submit" (click)="getCountryList()">country List</button>
+
+<table>
+    <tr>
+        <th>userId</th>
+        <th>Id</th>
+        <th>status</th>
+        <th>title</th>
+        <th>body</th>
+    
+    </tr>
+    <tr *ngFor="let employee of employeeList">
+        
+        <td>{{employee.userId}}</td>
+        <td>{{employee.id}}</td>
+        <td>{{employee.status}}</td>
+        <td>{{employee.title}}</td>
+        <td>{{employee.body}}</td>
+    </tr>
+   
+</table>

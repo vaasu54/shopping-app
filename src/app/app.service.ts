@@ -26,6 +26,18 @@ export class AppService {
 
 
   }
+  getUniversityListAPI(country : string ){
+    console.log("inside universityAPI");
+    let universities =this.httpClient.get("http://universities.hipolabs.com/search?country="+country);
+    //console.log(universities);
+    return universities;
+  }
+
+
+  getAllCountrys() {
+    console.log('Test this');
+    return this.httpClient.get('https://api.first.org/data/v1/countries');
+  }
 }
 //get=read
 //put=update

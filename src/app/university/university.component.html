@@ -1,1 +1,28 @@
-<p>university works!</p>
+<label for="SearchCountry">Country Name:</label>
+<input type="text" name="SearchCountry" 
+[(ngModel)]="selectedCountry"
+id="SearchCountry"> 
+
+<select name="selectedCountry" id="countrydp" class="form-control" [(ngModel)]="selectedCountry" (ngModelChange)="onChangeMake($event)"> 
+    <option *ngFor="let country of countrydropdown" [value]="country">{{country}}</option>
+ </select>
+<button type="submit" (click)="getUniversities()">Show Universities</button>
+<div></div>
+<table id="customers">
+   <tr>
+       <th>Country</th>
+       <th>Name</th>
+       <th>Web Pages</th>
+       <th>Domains</th>
+   </tr>
+   <tr *ngFor="let university of unversityList"> 
+       <td>{{university.country}}</td>
+       <td>{{university.name}}</td>
+       <td>
+           <span *ngFor="let webPages of university.web_pages"><a href="{{webPages}}"  target="_blank"> {{webPages}}</a></span>
+       </td>
+       <td>
+        <span *ngFor="let domains of university.domains"><a href="{{domains}}"  target="_blank"> {{domains}}</a></span>
+    </td>
+   </tr>
+</table>

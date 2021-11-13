@@ -15,6 +15,7 @@ import { SportComponent } from './news/sport/sport.component';
 import { MovieComponent } from './news/movie/movie.component';
 import { PoliticalComponent } from './news/political/political.component';
 import { UniversityComponent } from './university/university.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { UniversityComponent } from './university/university.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],

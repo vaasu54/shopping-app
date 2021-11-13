@@ -11,8 +11,8 @@ import { SportComponent } from './news/sport/sport.component';
 import { UniversityComponent } from './university/university.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+   { path: '', redirectTo: 'home', pathMatch: 'full' },
+   { path: 'home', component: HomeComponent },
   {
     path: 'news', component: NewsComponent, children: [
       { path: '', redirectTo: 'business', pathMatch: 'full' },
